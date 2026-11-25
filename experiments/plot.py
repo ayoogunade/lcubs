@@ -12,6 +12,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
+import matplotlib.ticker  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 RES = ROOT / "experiments" / "results"
@@ -60,6 +61,9 @@ def fig_scaling(rows):
     ax.set_yscale("log")
     ax.set_ylim(1e-3, 60)
     ax.set_xlim(15, 900)
+    ax.set_xticks([20, 50, 100, 200, 400, 800])
+    ax.xaxis.set_major_formatter(matplotlib.ticker.ScalarFormatter())
+    ax.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
     style_axes(ax, "Figure 1. Running time vs input length (log-log, median of 3)",
                "n (length of S)", "seconds")
     ax.legend(fontsize=7, loc="upper left")
