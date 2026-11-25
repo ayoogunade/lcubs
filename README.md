@@ -9,7 +9,7 @@ Given a string S, find the longest subsequence of the form X·X·X.
 | Path | What it is |
 |---|---|
 | `src/baseline.cpp` | Exact O(n^5) algorithm: try every pair of cut points, run a 3-string LCS on the three pieces |
-| `src/fasterAlgo.cpp` | Faster exact algorithm(s) (in progress) |
+| `src/fasterAlgo.cpp` | Exact branch-and-bound: drops letters seen < 3 times, bounds every cut by its pairwise LCS values (all cuts in O(n^3)), evaluates cuts best-bound-first and stops early. Prints pruning stats to stderr |
 | `src/common.hpp` | Shared input/output and 3-string LCS code |
 | `tests/brute.py` | Exponential brute force (n <= ~16), used as the reference answer |
 | `tests/test_against_brute.py` | Random tests comparing every built solver against the brute force |
@@ -20,7 +20,7 @@ Given a string S, find the longest subsequence of the form X·X·X.
 Needs a C++17 compiler (clang++ or g++) and Python 3.
 
 ```sh
-make                              # builds bin/baseline (and bin/fasterAlgo once it exists)
+make                              # builds bin/baseline and bin/fasterAlgo
 ./bin/baseline atcgtatgcatgca     # S as an argument
 echo atcgtatgcatgca | ./bin/baseline   # or on stdin
 make test                         # random tests against the brute force

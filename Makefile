@@ -1,7 +1,7 @@
 CXX      ?= clang++
 CXXFLAGS ?= -std=c++17 -O2 -Wall -Wextra
 
-all: bin/baseline   # add bin/fasterAlgo once src/fasterAlgo.cpp exists
+all: bin/baseline bin/fasterAlgo
 
 bin/%: src/%.cpp src/common.hpp | bin
 	$(CXX) $(CXXFLAGS) -o $@ $<
