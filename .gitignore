@@ -3,4 +3,3 @@ bin/
 .venv/
 __pycache__/
 .DS_Store
-experiments/results/*.csv

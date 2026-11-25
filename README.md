@@ -13,7 +13,8 @@ Given a string S, find the longest subsequence of the form X·X·X.
 | `src/common.hpp` | Shared input/output and 3-string LCS code |
 | `tests/brute.py` | Exponential brute force (n <= ~16), used as the reference answer |
 | `tests/test_against_brute.py` | Random tests comparing every built solver against the brute force |
-| `experiments/` | Benchmark runner and plots (in progress) |
+| `experiments/run.py` | Benchmark runner: scaling, alphabet size, noise, bound tightness. Writes `experiments/results/*.csv` |
+| `experiments/plot.py` | Figures and summary tables from the CSVs, into `experiments/plots/` |
 
 ## Build and run
 
@@ -35,3 +36,15 @@ C = atc.atc.atc
 ```
 
 Several X can be optimal (for the example above, `atg` also gives length 9).
+
+## Experiments
+
+```sh
+python3 -m venv .venv && .venv/bin/pip install matplotlib
+make
+.venv/bin/python experiments/run.py           # full run, ~15-25 min (use --quick for a smoke test)
+.venv/bin/python experiments/plot.py          # figures + experiments/plots/summary.md
+```
+
+Each data point is the median of 3 random strings. A solver stops growing n once a run passes 30 s.
+Reported numbers were measured on an Apple M1 (8 GB), Apple clang 21, `-O2`.
