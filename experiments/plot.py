@@ -53,12 +53,13 @@ def fig_scaling(rows):
     base = [r for r in rows if r["solver"] == "baseline" and r["workload"] == "random_dna"]
     if base:
         anchor = min(base, key=lambda r: abs(r["n"] - 100))
-        xs = [20, 1200]
+        xs = [20, 900]
         ax.plot(xs, [anchor["seconds"] * (x / anchor["n"]) ** 5 for x in xs], color="gray",
                 lw=0.8, label="reference slope n^5")
     ax.set_xscale("log")
     ax.set_yscale("log")
     ax.set_ylim(1e-3, 60)
+    ax.set_xlim(15, 900)
     style_axes(ax, "Figure 1. Running time vs input length (log-log, median of 3)",
                "n (length of S)", "seconds")
     ax.legend(fontsize=7, loc="upper left")
@@ -82,7 +83,7 @@ def fig_alphabet(rows):
     ax2.set_ylabel("answer length 3|X|", color="gray")
     lines = ax1.get_legend_handles_labels()
     lines2 = ax2.get_legend_handles_labels()
-    ax1.legend(lines[0] + lines2[0], lines[1] + lines2[1], fontsize=8, loc="upper right")
+    ax1.legend(lines[0] + lines2[0], lines[1] + lines2[1], fontsize=8, loc="center right")
     save(fig, "fig3_alphabet")
 
 

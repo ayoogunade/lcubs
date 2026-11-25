@@ -1,0 +1,141 @@
+== scaling ==
+  random_dna     n=   20 baseline      0.003s  len=9
+  random_dna     n=   20 fasterAlgo    0.003s  len=9
+  random_dna     n=   40 baseline      0.004s  len=18
+  random_dna     n=   40 fasterAlgo    0.003s  len=18
+  random_dna     n=   60 baseline      0.016s  len=27
+  random_dna     n=   60 fasterAlgo    0.004s  len=27
+  random_dna     n=   80 baseline      0.057s  len=39
+  random_dna     n=   80 fasterAlgo    0.007s  len=39
+  random_dna     n=  100 baseline      0.168s  len=51
+  random_dna     n=  100 fasterAlgo    0.013s  len=51
+  random_dna     n=  125 baseline      0.508s  len=66
+  random_dna     n=  125 fasterAlgo    0.047s  len=66
+  random_dna     n=  150 baseline      1.272s  len=78
+  random_dna     n=  150 fasterAlgo    0.118s  len=78
+  random_dna     n=  175 baseline      2.740s  len=93
+  random_dna     n=  175 fasterAlgo    0.205s  len=93
+  random_dna     n=  200 baseline      5.289s  len=105
+  random_dna     n=  200 fasterAlgo    0.406s  len=105
+  random_dna     n=  250 baseline     16.260s  len=138
+  random_dna     n=  250 fasterAlgo    1.170s  len=138
+  random_dna     n=  300 baseline   over 30s, stopping this solver
+  random_dna     n=  300 fasterAlgo    3.664s  len=162
+  random_dna     n=  350 fasterAlgo    7.241s  len=195
+  random_dna     n=  400 fasterAlgo   21.099s  len=207
+  random_dna     n=  500 fasterAlgo over 30s, stopping this solver
+  random_binary  n=   20 baseline      0.002s  len=12
+  random_binary  n=   20 fasterAlgo    0.002s  len=12
+  random_binary  n=   40 baseline      0.003s  len=27
+  random_binary  n=   40 fasterAlgo    0.002s  len=27
+  random_binary  n=   60 baseline      0.012s  len=42
+  random_binary  n=   60 fasterAlgo    0.002s  len=42
+  random_binary  n=   80 baseline      0.044s  len=54
+  random_binary  n=   80 fasterAlgo    0.003s  len=54
+  random_binary  n=  100 baseline      0.135s  len=72
+  random_binary  n=  100 fasterAlgo    0.004s  len=72
+  random_binary  n=  125 baseline      0.391s  len=90
+  random_binary  n=  125 fasterAlgo    0.007s  len=90
+  random_binary  n=  150 baseline      0.992s  len=102
+  random_binary  n=  150 fasterAlgo    0.027s  len=102
+  random_binary  n=  175 baseline      2.084s  len=129
+  random_binary  n=  175 fasterAlgo    0.030s  len=129
+  random_binary  n=  200 baseline      4.143s  len=141
+  random_binary  n=  200 fasterAlgo    0.123s  len=141
+  random_binary  n=  250 baseline     12.785s  len=186
+  random_binary  n=  250 fasterAlgo    0.287s  len=186
+  random_binary  n=  300 baseline   over 30s, stopping this solver
+  random_binary  n=  300 fasterAlgo    0.712s  len=219
+  random_binary  n=  350 fasterAlgo    1.596s  len=258
+  random_binary  n=  400 fasterAlgo    4.213s  len=288
+  random_binary  n=  500 fasterAlgo    7.989s  len=372
+  random_binary  n=  600 fasterAlgo over 30s, stopping this solver
+  near_cube_10   n=   20 baseline      0.002s  len=15
+  near_cube_10   n=   20 fasterAlgo    0.002s  len=15
+  near_cube_10   n=   40 baseline      0.004s  len=24
+  near_cube_10   n=   40 fasterAlgo    0.002s  len=24
+  near_cube_10   n=   60 baseline      0.015s  len=45
+  near_cube_10   n=   60 fasterAlgo    0.002s  len=45
+  near_cube_10   n=   80 baseline      0.049s  len=63
+  near_cube_10   n=   80 fasterAlgo    0.003s  len=63
+  near_cube_10   n=  100 baseline      0.161s  len=81
+  near_cube_10   n=  100 fasterAlgo    0.003s  len=81
+  near_cube_10   n=  125 baseline      0.466s  len=99
+  near_cube_10   n=  125 fasterAlgo    0.004s  len=99
+  near_cube_10   n=  150 baseline      1.254s  len=120
+  near_cube_10   n=  150 fasterAlgo    0.014s  len=120
+  near_cube_10   n=  175 baseline      2.661s  len=144
+  near_cube_10   n=  175 fasterAlgo    0.019s  len=144
+  near_cube_10   n=  200 baseline      5.137s  len=162
+  near_cube_10   n=  200 fasterAlgo    0.015s  len=162
+  near_cube_10   n=  250 baseline     15.855s  len=198
+  near_cube_10   n=  250 fasterAlgo    0.087s  len=198
+  near_cube_10   n=  300 baseline   over 30s, stopping this solver
+  near_cube_10   n=  300 fasterAlgo    0.163s  len=249
+  near_cube_10   n=  350 fasterAlgo    0.325s  len=288
+  near_cube_10   n=  400 fasterAlgo    1.502s  len=324
+  near_cube_10   n=  500 fasterAlgo    3.219s  len=408
+  near_cube_10   n=  600 fasterAlgo   10.167s  len=477
+  near_cube_10   n=  700 fasterAlgo   11.564s  len=570
+  near_cube_10   n=  800 fasterAlgo over 30s, stopping this solver
+  wrote /Users/ayoogunade/Desktop/CMPT360/lcubs/experiments/results/scaling.csv (73 rows)
+  (719s)
+== alphabet ==
+  sigma=  1 baseline      0.519s  len=150
+  sigma=  1 fasterAlgo    0.004s  len=150
+  sigma=  2 baseline      1.005s  len=108
+  sigma=  2 fasterAlgo    0.012s  len=108
+  sigma=  3 baseline      1.165s  len=90
+  sigma=  3 fasterAlgo    0.067s  len=90
+  sigma=  4 baseline      1.270s  len=75
+  sigma=  4 fasterAlgo    0.124s  len=75
+  sigma=  6 baseline      1.366s  len=60
+  sigma=  6 fasterAlgo    0.252s  len=60
+  sigma=  8 baseline      1.420s  len=54
+  sigma=  8 fasterAlgo    0.315s  len=54
+  sigma= 12 baseline      1.465s  len=45
+  sigma= 12 fasterAlgo    0.270s  len=45
+  sigma= 16 baseline      1.489s  len=33
+  sigma= 16 fasterAlgo    0.464s  len=33
+  sigma= 20 baseline      1.502s  len=33
+  sigma= 20 fasterAlgo    0.411s  len=33
+  sigma= 26 baseline      1.519s  len=27
+  sigma= 26 fasterAlgo    0.497s  len=27
+  wrote /Users/ayoogunade/Desktop/CMPT360/lcubs/experiments/results/alphabet.csv (20 rows)
+  (45s)
+== noise ==
+  noise=0.00 baseline      4.997s  len=198
+  noise=0.00 fasterAlgo    0.008s  len=198
+  noise=0.05 baseline      5.047s  len=177
+  noise=0.05 fasterAlgo    0.009s  len=177
+  noise=0.10 baseline      5.058s  len=168
+  noise=0.10 fasterAlgo    0.011s  len=168
+  noise=0.20 baseline      4.992s  len=144
+  noise=0.20 fasterAlgo    0.075s  len=144
+  noise=0.30 baseline      5.045s  len=111
+  noise=0.30 fasterAlgo    0.394s  len=111
+  noise=0.40 baseline      5.079s  len=117
+  noise=0.40 fasterAlgo    0.178s  len=117
+  noise=0.50 baseline      5.045s  len=114
+  noise=0.50 fasterAlgo    0.310s  len=114
+  noise=0.75 baseline      5.074s  len=105
+  noise=0.75 fasterAlgo    0.425s  len=105
+  noise=1.00 baseline      5.069s  len=102
+  noise=1.00 fasterAlgo    0.419s  len=102
+  wrote /Users/ayoogunade/Desktop/CMPT360/lcubs/experiments/results/noise.csv (18 rows)
+  (142s)
+== bound ==
+  random_dna     n=  50 done
+  random_dna     n= 100 done
+  random_dna     n= 200 done
+  random_dna     n= 400 done
+  random_binary  n=  50 done
+  random_binary  n= 100 done
+  random_binary  n= 200 done
+  random_binary  n= 400 done
+  near_cube_10   n=  50 done
+  near_cube_10   n= 100 done
+  near_cube_10   n= 200 done
+  near_cube_10   n= 400 done
+  wrote /Users/ayoogunade/Desktop/CMPT360/lcubs/experiments/results/bound.csv (36 rows)
+  (55s)
