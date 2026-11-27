@@ -7,3 +7,4 @@ node_modules/
 package*.json
 ~$*.docx
 experiments/results/quick/
+report/*.docx

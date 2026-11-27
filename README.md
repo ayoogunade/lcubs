@@ -24,7 +24,7 @@ S = atcgtatgcatgca   ->   X = atg,   C = atg·atg·atg   (length 9)
 
 ![Running time vs input length](experiments/plots/fig1_scaling.png)
 
-The fewer differences between S and a perfect cube, the tighter the bounds and the more cuts are skipped. On fully random strings the gain is a constant factor (the growth exponent stays near 5). More plots are in [`experiments/plots/`](experiments/plots), and the full write-up is in [`report/`](report).
+The fewer differences between S and a perfect cube, the tighter the bounds and the more cuts are skipped. On fully random strings the gain is a constant factor (the growth exponent stays near 5). More plots are in [`experiments/plots/`](experiments/plots), and the full write-up is in [`report/LCubS_Report.pdf`](report/LCubS_Report.pdf).
 
 ## How it works
 
@@ -47,7 +47,7 @@ The fewer differences between S and a perfect cube, the tighter the bounds and t
 | `tests/test_against_brute.py` | Randomised tests of every built solver against the brute force |
 | `experiments/run.py` | Benchmarks: scaling, alphabet size, noise, bound tightness. Writes CSVs to `experiments/results/` |
 | `experiments/plot.py` | Figures and summary tables, written to `experiments/plots/` |
-| `report/` | Technical report |
+| `report/LCubS_Report.pdf` | Technical report (8 pages: 4 main + appendices) |
 
 ## Build and run
 
