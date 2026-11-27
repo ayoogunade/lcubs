@@ -16,7 +16,7 @@ All solvers are checked to agree on the answer whenever both finish.
 
 Usage (from the repo root, after `make`):
     .venv/bin/python experiments/run.py            # everything (~15-25 min)
-    .venv/bin/python experiments/run.py --quick    # small smoke test
+    .venv/bin/python experiments/run.py --quick    # small smoke test (writes to results/quick/)
     .venv/bin/python experiments/run.py scaling noise
 """
 import argparse
@@ -207,6 +207,9 @@ def main() -> None:
     ap.add_argument("which", nargs="*", choices=[*EXPERIMENTS, []], help="experiments to run (default: all)")
     ap.add_argument("--quick", action="store_true", help="small sizes, for a smoke test")
     args = ap.parse_args()
+    if args.quick:  # never overwrite the full results with smoke-test data
+        global OUT
+        OUT = OUT / "quick"
     for solver in ("baseline", "fasterAlgo"):
         if not (BIN / solver).exists():
             sys.exit("Build first: make")
